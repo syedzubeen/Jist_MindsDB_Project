@@ -64,7 +64,7 @@ def upload_file():
 
             return render_template('index.html',  summarizer_response=summarizer_response)
     
-    return render_template('index.html', content=file_content, summarizer_response=None)
+    return render_template('index.html', content=file_content)
     
 
 def read_pdf(uploaded_file):

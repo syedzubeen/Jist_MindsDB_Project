@@ -7,5 +7,11 @@ body, h1, h2 {
     border: 3.5px dashed #b0b0b0; /* 2px dashed grey border */
     padding: 10px; /* Add some padding to the div for spacing */
     width:  600px; /* Set the desired width */
-    height: 350px; /* Set the desired height */
+    height: 450px; /* Set the desired height */
+}
+.custom-border1 {
+    border: 3.5px dashed #b0b0b0; /* 2px dashed grey border */
+    padding: 10px; /* Add some padding to the div for spacing */
+    width:  600px; /* Set the desired width */
+    height: 450px; /* Set the desired height */
 }
