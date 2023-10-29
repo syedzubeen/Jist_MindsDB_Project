@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload and Text Extraction</title>
+</head>
+<body>
+    <h1>File Upload and Text Extraction</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" name="uploadfile" value="Upload">
+    </form>
+    <h2>Uploaded File Content:</h2>
+    <pre>{{ content }}</pre>
+
+    <!-- Add the "Summarize" button and "Summarizer's Response" section -->
+    <form method="POST">
+        <input type="submit" name="summarizebutton" value="Summarize">
+    </form>
+    <h2>Summarizer's Response:</h2>
+    <div class="result">
+        {% if transformation_response is not none %}
+        <pre class="response-box">{{ transformation_response }}</pre>
+        {% endif %}
+      </div>
+</body>
+</html>
