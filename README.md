@@ -10,7 +10,7 @@
 </table>
 </div><br><br>
 
-JIST is a web application that utilizes [MindsDB](https://www.mindsdb.com/) and [OpenAI](https://openai.com) to generate concise and informative summaries of research papers. It is designed to help users quickly grasp the key insights and findings from research papers without the need to read the entire document.
+JIST is a web application that utilizes [MindsDB](https://www.mindsdb.com/) and [OpenAI](https://openai.com) to generate concise and informative summaries of research papers. It is designed to help users quickly grasp the key insights and findings from research papers without the need to read the entire document. <br>
 
 ![mindsdb-summary](https://github.com/syedzubeen/Jist_MindsDB_Project/assets/14253061/00efbf2c-6e59-4265-ba8b-c291f6bdbc0c)
 
@@ -19,7 +19,6 @@ JIST is a web application that utilizes [MindsDB](https://www.mindsdb.com/) and 
 
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -38,6 +37,37 @@ To get started with the JIST, follow these instructions:
 
    ```bash
    git clone https://github.com/syedzubeen/Jist_MindsDB_Project.git
+
+Follow these steps to get Ripped up and running on your local machine:
+   
+2. **Create a Virtual Environment:**
+     ```sh
+     python -m venv venv
+     Linux: source venv/bin/activate
+     Windows: venv\Scripts\activate
+
+3. **Install Dependencies:**
+      ```sh
+      pip install requests, asyncio
+
+4. **Create an env_vars.txt file in the app directory with the following content:**
+   ```sh
+   USERNAME=<MindsDB Cloud Username>
+   PASSWORD=<MindsDB Cloud Password>
+   
+5. **Run the Application:**
+   ```sh
+   flask run
+   
+6. **Access the Application:**
+
+   Open your web browser and navigate to http://localhost:5000 to access Jist.
+   
+## Usage
+
+- Upload your research paper by choosing the appropriate file.
+- Click on Summarise to generate the summary for the requested paper.
+
 
 ## Contributing
 We welcome contributions from the community. If you would like to contribute to this project, please follow these steps:
