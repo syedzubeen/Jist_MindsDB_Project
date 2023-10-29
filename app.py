@@ -106,25 +106,24 @@ async def summarizer(username, password, paper):
     })
 
     
-    # Remove special characters from start and end
-    paper = paper.strip('[\n]').strip()
-    cleaned_text = re.sub(r'\n', '', paper)
-    #print(cleaned_text)
+    input_string = paper
+    cleaned_string = re.sub(r'[^a-zA-Z .]', '', input_string)
+    print(cleaned_string)
 
-    custom_query = "SELECT answer FROM project_summary_gen.summaries WHERE question = 'You are a scientist and a researcher who understands scientific research papers and provide concise summaries of each paper. You aim is to generate a summary of the paper in 5-10 lines, capturing the key findings and contributions, followed by 5 key points from the paper presented in a bullet format. you should be able to handle research papers from various domains and adapt to the specific terminology and structure of the paper and should also prioritize the most relevant information and avoid excessive repetition in the summaries. The content of the paper you need to summarise right now are as follows: " + cleaned_text + "';"
+    custom_query = "SELECT answer FROM project_summary_gen.summaries WHERE question = 'You are a scientist and a researcher who understands scientific research papers and provide concise summaries of each paper. You aim is to generate a summary of the paper in 5-10 lines, capturing the key findings and contributions, followed by 5 key points from the paper presented in a bullet format. You should be able to handle research papers from various domains and adapt to the specific terminology and structure of the paper and should also prioritize the most relevant information and avoid excessive repetition in the summaries. The contents of the paper are long and I will send you the its contents in chunks and here is the first one: " + cleaned_string + "';"
     resp = session.post('https://cloud.mindsdb.com/api/sql/query', json={'query': custom_query})
     
     json_response = resp.json()
     print("json response is:\n")
-    print (json_response)
+    #print (json_response)
     # Assuming there's only one element in the inner list
     summarised = json_response['data'][0][0]  
-    print("summarised response is:\n")
-    print (json_response)
+    #print("summarised response is:\n")
+    #print (json_response)
     # Remove special characters from start and end
     summarised = summarised.strip('[\n]').strip()
-    print("stripped response is:\n")
-    print (json_response)
+    #print("stripped response is:\n")
+    #print (json_response)
     #Debug and print value
     print(summarised)
 
