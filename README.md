@@ -1,7 +1,14 @@
 # JIST
 
-![logo](https://github.com/syedzubeen/Jist_MindsDB_Project/assets/14253061/111af89d-843a-4a96-a701-a45c3cb9dca8)
-
+<div style="text-align: center;">
+<table>
+  <tr>
+    <td align="center"><img src="https://github.com/syedzubeen/Jist_MindsDB_Project/assets/14253061/555946f3-297a-40ad-89ab-9e380731d121" height="50" width="180" alt="Logo 1"></td>
+    <td align="center"><img src="https://github.com/syedzubeen/Jist_MindsDB_Project/assets/14253061/df9c32b0-3e90-4d04-bc7c-40891530d49f" height="50" width="210" alt="Logo 2"></td>
+    <td align="center"><img src="https://github.com/syedzubeen/Jist_MindsDB_Project/assets/14253061/141bc89d-58b7-4a48-8431-c8ed5d48681b" height="50" width="360" alt="Logo 3"></td>
+  </tr>
+</table>
+</div><br><br>
 
 JIST is a web application that utilizes [MindsDB](https://www.mindsdb.com/) and [OpenAI](https://openai.com) to generate concise and informative summaries of research papers. It is designed to help users quickly grasp the key insights and findings from research papers without the need to read the entire document.
 
