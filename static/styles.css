@@ -1,0 +1,11 @@
+body, h1, h2 {
+    font-family: 'Product Sans', sans-serif;
+    background-color: #FFDE59;
+    overflow-x: hidden;
+}
+.custom-border {
+    border: 3.5px dashed #b0b0b0; /* 2px dashed grey border */
+    padding: 10px; /* Add some padding to the div for spacing */
+    width:  600px; /* Set the desired width */
+    height: 350px; /* Set the desired height */
+}

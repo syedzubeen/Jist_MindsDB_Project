@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>File Upload and Text Extraction</title>
+    <title>Jist.</title>
+    <style>
+        @font-face {
+            font-family: 'Product Sans';
+            src: url('product-sans/product-sans/Product Sans Regular.ttff') format('truetype');
+            /* Include additional formats for better browser compatibility */
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
-    <h1>File Upload and Text Extraction</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" name="uploadfile" value="Upload">
-    </form>
-    <h2>Uploaded File Content:</h2>
-    <pre>{{ content }}</pre>
+    <nav class="navbar navbar-light" style="background-color: #000000;">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='logo.png') }}" width="250" height="30" class="d-inline-block align-top" alt="Your Logo">
+        </a>
+    </nav>
 
-    <!-- Add the "Summarize" button and "Summarizer's Response" section -->
-    <form method="POST">
-        <input type="submit" name="summarizebutton" value="Summarize">
-    </form>
-    <h2>Summarizer's Response:</h2>
-    <div class="result">
-        {% if transformation_response is not none %}
-        <pre class="response-box">{{ transformation_response }}</pre>
-        {% endif %}
-      </div>
+    <br><br><br><br>
+   
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <div class="custom-border mx-auto">
+            <h1 style="font-weight: bold;">Upload Research Paper</h1><br><br>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit" name="uploadfile" class="btn btn-secondary btn-sm">Submit File</button>
+            </form>
+            </div>
+        </div>
+    
+        <div class="col-md-6 text-center">
+            <h1 style="font-weight: bold;">Summarize Research</h1><br>
+            <form method="POST">
+                <button type="submit" name="summarizebutton" class="btn btn-secondary btn-sm">Summarize</button>
+            </form><br>
+            <h4>The Highlights of this Research are:</h4>
+            <div class="result">
+                {% if transformation_response is not none %}
+                <pre class="response-box">{{ transformation_response }}</pre>
+                {% endif %}
+            </div>
+            <pre>{{ summarizer_response }}</pre>
+        </div>
+    </div>
 </body>
 </html>
