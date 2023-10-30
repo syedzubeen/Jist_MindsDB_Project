@@ -15,3 +15,13 @@ body, h1, h2 {
     width:  600px; /* Set the desired width */
     height: 450px; /* Set the desired height */
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+}
